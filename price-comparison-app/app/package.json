@@ -2,5 +2,9 @@
     "main": "app.js",
     "android": {
         "v8Flags": "--expose_gc"
+    },
+    "nativescript-i18n": {
+        "defaultLang": "en",
+        "customLangPath": "app/i18n"
     }
 }

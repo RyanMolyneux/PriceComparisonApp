@@ -1,0 +1,46 @@
+<Page loaded="load">
+    <Page.actionBar>
+
+        <ActionBar title="{{ L('app_name') }}"></ActionBar>
+
+    </Page.actionBar>
+    <GridLayout rows="*, *, *" columns="*, *">
+        <!-- TODO: finish off the home-view-model class in order too support shown functionality.
+        <ListPicker row="0"
+                    col="0"
+                    items="{{ proudctTypes }}"
+                    selectedIndex="{{ productTypeSelected }}">
+        </ListPicker>
+        <Button tap="filterProductTypes" tex="Filter" ></Button>
+
+        <ScrollView orientation="vertical" height="200" row="1" col="0">
+            <ListView>
+                <ListView.itemTemplates items="{{ products }}"
+                                        itemTap="productSelected"
+                                        itemTemplateSelector="productTemplateMatcher">
+
+                   <template key="primaryProductSelected">
+
+                  </template>
+
+                  <template key="secondaryProductSelected">
+                  </template>
+
+                  <template key="product">
+                  </template>
+
+
+                  <template key="productNotMatchingFilter">
+                  </template>
+
+                </ListView.itemTemplates>
+            </ListView>
+        </ScrollView>
+        -->
+        <Label text="Computed Value: "></Label>
+
+    </GridLayout>
+
+
+
+</Page>
