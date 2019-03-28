@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Products
 {
-    public class BrandEntry
+    public class Brand
     {
         [Key]
         public string BrandName { get; set; } // unique
@@ -15,6 +15,6 @@ namespace Products
         [Required]
         public double Value { get; set; }
 
-        public ICollection<ProductEntry> Products { get; set; }
+        public ICollection<Product> Products { get; set; }
     }
 }

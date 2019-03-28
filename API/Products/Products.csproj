@@ -3,7 +3,19 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>e486ed92-20f4-401d-8b57-1618f521a89a</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190326182358_initialcreate.cs" />
+    <Compile Remove="Migrations\20190326182358_initialcreate.Designer.cs" />
+    <Compile Remove="Migrations\20190326191352_initialcreate.cs" />
+    <Compile Remove="Migrations\20190326191352_initialcreate.Designer.cs" />
+    <Compile Remove="Migrations\20190328085917_first.cs" />
+    <Compile Remove="Migrations\20190328085917_first.Designer.cs" />
+    <Compile Remove="Migrations\20190328104135_first.cs" />
+    <Compile Remove="Migrations\20190328104135_first.Designer.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />

@@ -1,0 +1,14 @@
+C:\Users\NEO\source\repos\Products\Products\bin\Release\netcoreapp2.2\Products.deps.json
+C:\Users\NEO\source\repos\Products\Products\bin\Release\netcoreapp2.2\Products.runtimeconfig.json
+C:\Users\NEO\source\repos\Products\Products\bin\Release\netcoreapp2.2\Products.runtimeconfig.dev.json
+C:\Users\NEO\source\repos\Products\Products\bin\Release\netcoreapp2.2\Products.dll
+C:\Users\NEO\source\repos\Products\Products\bin\Release\netcoreapp2.2\Products.pdb
+C:\Users\NEO\source\repos\Products\Products\obj\Release\netcoreapp2.2\Products.csprojAssemblyReference.cache
+C:\Users\NEO\source\repos\Products\Products\obj\Release\netcoreapp2.2\Products.csproj.CoreCompileInputs.cache
+C:\Users\NEO\source\repos\Products\Products\obj\Release\netcoreapp2.2\Products.RazorAssemblyInfo.cache
+C:\Users\NEO\source\repos\Products\Products\obj\Release\netcoreapp2.2\Products.RazorAssemblyInfo.cs
+C:\Users\NEO\source\repos\Products\Products\obj\Release\netcoreapp2.2\Products.AssemblyInfoInputs.cache
+C:\Users\NEO\source\repos\Products\Products\obj\Release\netcoreapp2.2\Products.AssemblyInfo.cs
+C:\Users\NEO\source\repos\Products\Products\obj\Release\netcoreapp2.2\Products.RazorTargetAssemblyInfo.cache
+C:\Users\NEO\source\repos\Products\Products\obj\Release\netcoreapp2.2\Products.dll
+C:\Users\NEO\source\repos\Products\Products\obj\Release\netcoreapp2.2\Products.pdb

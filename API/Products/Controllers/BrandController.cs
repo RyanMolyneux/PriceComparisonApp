@@ -18,32 +18,43 @@ namespace Products.Controllers
         {
             _context = context;
         }
+        
 
 
         [HttpGet("all")]
         // GET api/brand/all
-        public IEnumerable<BrandEntry> GetAllBrands()
+        public IQueryable GetAllBrands()
         {
-            var entries = _context.BrandEntry.OrderBy(e => e.BrandName);
-            return entries;
+
+            var result = from brand in _context.Brand
+                         join prod in _context.Product on brand.BrandName equals prod.BrandName
+                         select new
+                         {
+                             brand.BrandName,
+                             brand.Value
+                         };
+            return result;
+
         }
 
-        [HttpGet("name/{name}", Name = "GetBrand")]
-        // GET api/brand/name
-        public IActionResult GetBrand(string brand)
+        [HttpGet("{brandName}", Name = "GetBrand")]
+        // GET api/brand/adidas
+        public IActionResult GetBrand(string brandName)
         {
             // LINQ query, find matching entry for brand
-            var entry = _context.BrandEntry.FirstOrDefault(e => e.BrandName.ToUpper() == brand.ToUpper());
+            var entry = from brand in _context.Brand
+                        join prod in _context.Product on brand.BrandName equals prod.BrandName
+                        where brand.BrandName.ToUpper() == brandName.ToUpper()
+                        select new
+                        {
+                            brand.BrandName,
+                            brand.Value
+                        };
             if (entry == null)
             {
                 return NotFound();
             }
             return Ok(entry);
         }
-
-
-
-
-
     }
 }

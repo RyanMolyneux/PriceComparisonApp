@@ -7,20 +7,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Products
 {
-    public class ProductEntry
+    public class Product
     {
         [Key]
-        public string Number { get; set; }              // unique
+        public int id { get; set; }              // unique
 
         [Required]
         public string Name { get; set; }
 
         [Required]
         public double Price { get; set; }
-
-        [ForeignKey("Brand")]
-        public string BrandNameFK { get; set; }
+      
+        public string BrandName { get; set; }
+        public Brand Brand { get; set; }
         
-
     }
 }

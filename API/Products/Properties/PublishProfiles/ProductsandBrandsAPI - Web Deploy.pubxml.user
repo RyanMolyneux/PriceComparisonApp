@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnNp0+lIS1UOY3Wphelu+jQAAAAACAAAAAAAQZgAAAAEAACAAAACED02i08R1PnvyVofsy9J5cObcJewZpkqdbX8qQFhk0wAAAAAOgAAAAAIAACAAAAAd1X0TUYSBPVYDZBCg3Lens74tKQ48sqiof/YrunF254AAAADZ+URat2Ze7t/o95CNl1WFS6b2Plk0Dnmx3uk8UXMiGvAy6V/1MH4bs/AWaa2RcjsBJkN50iOB6cGwwI9xvdgAbkYUz7GFMoVQSI2KYqNmIUHhj6rsqDAyOvQ8a4QE74nDueOXCKnJdYBgu6cy3eiQABAk6FZVqyq2SbKkyKdhtEAAAAAZDqwO1LD9h6zVIZwGbpj1Z+uWPHZT7c9vqldZ13CTzSt3QNkqu2+D4YsC3vGcQfAVo/jXlygiIPnQXnB629zD</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="BrandContext">
+      <Value>Data Source=tcp:productsandbrandsapidbserver.database.windows.net,1433%3bInitial Catalog=ProductsandBrandsAPI_db%3bUser Id=X00128490%40productsandbrandsapidbserver%3bPassword=01Mar977</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Products.Models.BrandContext">
+      <Value>Data Source=tcp:productsandbrandsapidbserver.database.windows.net,1433%3bInitial Catalog=ProductsandBrandsAPI_db%3bUser Id=X00128490%40productsandbrandsapidbserver%3bPassword=01Mar977</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

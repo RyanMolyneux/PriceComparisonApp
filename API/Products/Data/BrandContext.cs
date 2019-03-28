@@ -13,7 +13,7 @@ namespace Products.Models
         {
         }
 
-        public DbSet<Products.BrandEntry> BrandEntry { get; set; }
-        public DbSet<Products.ProductEntry> ProductEntry { get; set; }
+        public DbSet<Products.Brand> Brand { get; set; }
+        public DbSet<Products.Product> Product { get; set; }
     }
 }

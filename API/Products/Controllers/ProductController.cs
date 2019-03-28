@@ -22,23 +22,18 @@ namespace Products.Controllers
 
         [HttpGet("all")]
         // GET api/products/all
-        public IEnumerable<ProductEntry> GetAllEntries()
+        public IQueryable GetAllEntries()
         {
-            var entries = _context.ProductEntry.OrderBy(e => e.Number);
-            return entries;
-        }
-
-        [HttpGet("id/{Id}", Name = "GetEntry")]
-        // GET api/product/id/01
-        public IActionResult GetEntry(string number)
-        {
-            // LINQ query, find matching entry for number
-            var entry = _context.ProductEntry.FirstOrDefault(e => e.Number.ToUpper() == number.ToUpper());
-            if (entry == null)
-            {
-                return NotFound();
-            }
-            return Ok(entry);
+            var result = from prod in _context.Product
+                         join brand in _context.Brand on prod.BrandName equals brand.BrandName
+                         select new
+                         {
+                             prod.id,
+                             prod.Name,
+                             prod.Price,
+                             prod.BrandName
+                         };
+            return result;
         }
 
     }

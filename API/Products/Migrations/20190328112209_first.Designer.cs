@@ -9,8 +9,8 @@ using Products.Models;
 namespace Products.Migrations
 {
     [DbContext(typeof(BrandContext))]
-    [Migration("20190325111402_inital")]
-    partial class inital
+    [Migration("20190328112209_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,7 +20,7 @@ namespace Products.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Products.BrandEntry", b =>
+            modelBuilder.Entity("Products.Brand", b =>
                 {
                     b.Property<string>("BrandName")
                         .ValueGeneratedOnAdd();
@@ -29,33 +29,34 @@ namespace Products.Migrations
 
                     b.HasKey("BrandName");
 
-                    b.ToTable("BrandEntry");
+                    b.ToTable("Brand");
                 });
 
-            modelBuilder.Entity("Products.ProductEntry", b =>
+            modelBuilder.Entity("Products.Product", b =>
                 {
-                    b.Property<string>("Number")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("BrandNameFK");
+                    b.Property<string>("BrandName");
 
                     b.Property<string>("Name")
                         .IsRequired();
 
                     b.Property<double>("Price");
 
-                    b.HasKey("Number");
+                    b.HasKey("id");
 
-                    b.HasIndex("BrandNameFK");
+                    b.HasIndex("BrandName");
 
-                    b.ToTable("ProductEntry");
+                    b.ToTable("Product");
                 });
 
-            modelBuilder.Entity("Products.ProductEntry", b =>
+            modelBuilder.Entity("Products.Product", b =>
                 {
-                    b.HasOne("Products.BrandEntry", "Brand")
+                    b.HasOne("Products.Brand", "Brand")
                         .WithMany("Products")
-                        .HasForeignKey("BrandNameFK");
+                        .HasForeignKey("BrandName");
                 });
 #pragma warning restore 612, 618
         }

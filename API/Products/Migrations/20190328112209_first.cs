@@ -1,13 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Products.Migrations
 {
-    public partial class inital : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "BrandEntry",
+                name: "Brand",
                 columns: table => new
                 {
                     BrandName = table.Column<string>(nullable: false),
@@ -15,42 +16,43 @@ namespace Products.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BrandEntry", x => x.BrandName);
+                    table.PrimaryKey("PK_Brand", x => x.BrandName);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductEntry",
+                name: "Product",
                 columns: table => new
                 {
-                    Number = table.Column<string>(nullable: false),
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: false),
                     Price = table.Column<double>(nullable: false),
-                    BrandNameFK = table.Column<string>(nullable: true)
+                    BrandName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductEntry", x => x.Number);
+                    table.PrimaryKey("PK_Product", x => x.id);
                     table.ForeignKey(
-                        name: "FK_ProductEntry_BrandEntry_BrandNameFK",
-                        column: x => x.BrandNameFK,
-                        principalTable: "BrandEntry",
+                        name: "FK_Product_Brand_BrandName",
+                        column: x => x.BrandName,
+                        principalTable: "Brand",
                         principalColumn: "BrandName",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductEntry_BrandNameFK",
-                table: "ProductEntry",
-                column: "BrandNameFK");
+                name: "IX_Product_BrandName",
+                table: "Product",
+                column: "BrandName");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ProductEntry");
+                name: "Product");
 
             migrationBuilder.DropTable(
-                name: "BrandEntry");
+                name: "Brand");
         }
     }
 }

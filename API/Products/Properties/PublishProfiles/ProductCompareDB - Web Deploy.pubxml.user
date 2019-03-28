@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnNp0+lIS1UOY3Wphelu+jQAAAAACAAAAAAAQZgAAAAEAACAAAAB4ztZQtPUgBHL8VUMdRu/jk4xLxW3QHCFA9TVsEoKFqQAAAAAOgAAAAAIAACAAAAAn0OrO2gxpSeaLti3SwaG++Wte4go6qzgdacxLcJqVYYAAAABthbW+ymDFqKk71FVmWdp60bOS08yBb/fnLPz+pnIBk6DjBSVHtkP4q/Xt2c4qGHvU/G3CpLDFyZzkhfnVDe/GLgZFqSuf9lxr5eqPgUQZJlq/7SDjGTPwDi7R0Iap5xkj6tiQHQx4DkOMNqOOYf7PydG3knSng/v6aW/0YGvyHkAAAAAceUErzFH1ZiVtOMFsq4uea1Hz7k4KN8/0Ar11iPuvZ6qFOCzN7Ck9mjN7qRESkEnf/N3CDiFc4G2i9W/Nldz/</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="BrandContext">
+      <Value>Data Source=tcp:productcomparedbdbserver.database.windows.net,1433%3bInitial Catalog=ProductCompareDB_db%3bUser Id=X00128490%40productcomparedbdbserver%3bPassword=01Mar977</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Products.Models.BrandContext">
+      <Value>Data Source=tcp:productcomparedbdbserver.database.windows.net,1433%3bInitial Catalog=ProductCompareDB_db%3bUser Id=X00128490%40productcomparedbdbserver%3bPassword=01Mar977</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
