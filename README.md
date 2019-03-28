@@ -14,6 +14,9 @@ apk that you can then install.
 this app takes prices for products aswell as brand & type of product,
 ### API Changes
 - Created Initial Entity Framework Code, untested needs to add DB to Azure & Instance.
+
+- Uploaded the final API version. The API runs on Azure and is Connected to the Azure SQL DB.
+
 ### APP Changes
 - Support For locales en, ru, ga & fr added, information on how this was done can
   be found seen here: https://github.com/rborn/nativescript-i18n.
