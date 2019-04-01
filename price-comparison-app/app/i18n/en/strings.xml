@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">Price Compare</string>
     <string name="title_activity_kimera"> Price Compare </string>
+    <string name="api_endpoint"> https://productcomparedb.azurewebsites.net </string>
 </resources>

@@ -6,8 +6,17 @@
 
 ### Build
 ```
-tns run build
+tns build android
 ```
+### Run on android pc emulator
+```
+tns run android
+```
+### E2E Test - Appium
+```
+npm run e2e --runType=android23
+```
+
 after this command is run the command line will output a path too the apps debug
 apk that you can then install.
 
@@ -23,4 +32,6 @@ this app takes prices for products aswell as brand & type of product,
 - App Images e.g. logo, icon etc scaled for varying screen size support,
   tool used to easily create scaled logo & icon images can be found here: http://nsimage.brosteins.com.
 - App UML Class diagram drawn up for app functionality.
-- Initial UI Laid out kept commented untial api is fully functional.
+- Core functionality implemented
+- App build & all functionality tested manually and working in android emulator.
+- E2E Tests implemented but not working.

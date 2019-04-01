@@ -1,44 +1,65 @@
 <Page loaded="load">
     <Page.actionBar>
 
-        <ActionBar title="{{ L('app_name') }}"></ActionBar>
+        <ActionBar title="{{ L('app_name') }}" id="TitleBar" ></ActionBar>
 
     </Page.actionBar>
-    <GridLayout rows="*, *, *" columns="*, *">
-        <!-- TODO: finish off the home-view-model class in order too support shown functionality.
+    <GridLayout rows="*, *, *" columns="*, *, *" id="ContentBody" horizontalAlignment="stretch" verticalAligment="stretch">
+
         <ListPicker row="0"
                     col="0"
-                    items="{{ proudctTypes }}"
-                    selectedIndex="{{ productTypeSelected }}">
-        </ListPicker>
-        <Button tap="filterProductTypes" tex="Filter" ></Button>
+                    colSpan="3"
+                    loaded="loadProductFilter"
+                    items="{{ productTypes }}"
+                    selectedIndex="{{ productTypeSelected }}"/>
 
-        <ScrollView orientation="vertical" height="200" row="1" col="0">
-            <ListView>
-                <ListView.itemTemplates items="{{ products }}"
-                                        itemTap="productSelected"
-                                        itemTemplateSelector="productTemplateMatcher">
+
+        <ScrollView row="1" col="0" colSpan="3" horizontalAlignment="stretch">
+            <ListView items="{{ products }}"
+                      itemTap="productSelected"
+                      itemTemplateSelector="productTemplateMatcher">
+                <ListView.itemTemplates>
 
                    <template key="primaryProductSelected">
+                       <StackLayout class="primaryProductSelected">
+                           <Label text="{{ brandName }}"  class="heading"/>
+                           <Label text="{{ 'Product: ' + name }}"/>
+                           <Label text="{{ 'Price: $ ' + price }}" />
+                       </StackLayout>
+                   </template>
 
-                  </template>
+                   <template key="secondaryProductSelected">
+                       <StackLayout class="secondaryProductSelected">
+                           <Label text="{{ brandName }}"  class="heading"/>
+                           <Label text="{{ 'Product: ' + name }}"/>
+                           <Label text="{{ 'Price: $' + price }}" />
+                       </StackLayout>
+                   </template>
 
-                  <template key="secondaryProductSelected">
-                  </template>
+                   <template key="product">
+                      <StackLayout>
+                          <Label text="{{ brandName }}" />
+                          <Label text="{{ 'Product: ' + name }}"/>
+                          <Label text="{{ 'Price: $' + price }}" />
+                      </StackLayout>
+                   </template>
 
-                  <template key="product">
-                  </template>
-
-
-                  <template key="productNotMatchingFilter">
-                  </template>
+                   <template key="productNotMatchingFilter">
+                      <Label text="" class="invisible"/>
+                   </template>
 
                 </ListView.itemTemplates>
             </ListView>
         </ScrollView>
-        -->
-        <Label text="Computed Value: "></Label>
 
+
+
+        <StackLayout row="2" colSpan="3" horizontalAlignment="stretch" id="ResultingComparison">
+
+              <Label text="Value Comparison" class="title"  horizontalAlignment="center"/>
+              <Label text="{{ selection.comparisonResult }}" class="heading"   horizontalAlignment="center"/>
+
+        </StackLayout>
     </GridLayout>
 
 

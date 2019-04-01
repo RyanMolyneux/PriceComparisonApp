@@ -6,5 +6,8 @@
     "nativescript-i18n": {
         "defaultLang": "en",
         "customLangPath": "app/i18n"
+    },
+    "dependencies": {
+        "nativescript-dev-webpack": "^0.21.0"
     }
 }

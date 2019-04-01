@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name"> Prix ​​Comparer </string>
-    <string name="title_activity_kimera"> Prix ​​Comparer </string>
+    <string name="app_name">Preisvergleich</string>
+    <string name="title_activity_kimera"> Preisvergleich </string>
     <string name="api_endpoint"> https://productcomparedb.azurewebsites.net </string>
 </resources>

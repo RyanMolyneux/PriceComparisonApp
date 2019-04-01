@@ -1,0 +1,20 @@
+.title {
+    font-size: 32px;
+}
+.heading {
+    font-size: 20px;
+}
+.invisible {
+    opacity: 1;
+}
+.width-100 {
+    width: 450px;
+}
+
+.primaryProductSelected {
+    background-color: #e65c00;
+}
+
+.secondaryProductSelected {
+    background-color: #ffcc99;
+}
