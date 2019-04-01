@@ -4,6 +4,10 @@
 ### Prerequisites
 - install NativeScript Command line tool, guide on how can be found here: https://docs.nativescript.org/start/quick-setup
 
+### Add Android Platform
+```
+tns platform add android
+```
 ### Build
 ```
 tns build android
