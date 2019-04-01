@@ -7,11 +7,13 @@ function Selection() {
 
         if (this.primaryProductComparedValueOfIndex != null && this.secondaryProductComparedValueOfIndex != null) {
 
-            var primaryProduct = products.getItem(this.primaryProductComparedValueOfIndex),
-                secondaryProduct = products.getItem(this.secondaryProductComparedValueOfIndex);
+            var primaryProduct = products.getItem(this.primaryProductComparedValueOfIndex);
+            var secondaryProduct = products.getItem(this.secondaryProductComparedValueOfIndex);
 
-            var primaryProductValue = primaryProduct + brands[products.getItem(this.primaryProductComparedValueOfIndex).brandName].value,
-                secondaryProductValue = secondaryProduct.price + brands[products.getItem(this.secondaryProductComparedValueOfIndex).brandName].value;
+            var primaryProductValue = primaryProduct.price + brands[primaryProduct.brandName].value;
+            var secondaryProductValue = secondaryProduct.price + brands[secondaryProduct.brandName].value;
+
+
 
             if (primaryProductValue > secondaryProductValue) {
                 this.comparisonResult =  primaryProduct.brandName + " - "+ primaryProduct.name + " are a better Value!!!";

@@ -30,7 +30,7 @@ function load(args) {
 
             if (homePageModel.brands[product.brandName] == null) {
 
-                fetch(L('api_endpoint') + "/api/brand/all").then((response) => response.json()
+                fetch(L('api_endpoint') + "/api/brand/" + product.brandName).then((response) => response.json()
                 ).then((json) => {
 
                     homePageModel.brands[product.brandName] = json[0];
